@@ -1,0 +1,10 @@
+{
+  "extends": ["@tsconfig/node24/tsconfig", "@tsconfig/node-ts/tsconfig"],
+  "compilerOptions": {
+    "types": ["node", "vitest/importMeta"],
+    "resolveJsonModule": true,
+    "noUncheckedIndexedAccess": true,
+    "noEmit": true
+  },
+  "include": ["src/**/*.ts", "vitest.config.ts"]
+}
