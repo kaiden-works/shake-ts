@@ -1,0 +1,178 @@
+version: 1
+
+rules:
+  - expected: でき
+    pattern: /出来(?=[るれたてなずまよん])/
+    specs:
+      - from: 検証が出来る
+        to: 検証ができる
+      - from: 出来なかった
+        to: できなかった
+      - from: 同じ出来事を指す
+        to: 同じ出来事を指す
+
+  - expected: 評価
+    pattern: /出来(?![事るれたてなずまよん])/
+    specs:
+      - from: 出来がよい
+        to: 評価がよい
+      - from: 同じ出来事を指す
+        to: 同じ出来事を指す
+      - from: 検証が出来る
+        to: 検証が出来る
+
+  - expected: 必要とな$1
+    pattern: /要([りる])/
+    specs:
+      - from: 手続きが要り、時間がかかる
+        to: 手続きが必要となり、時間がかかる
+      - from: 署名鍵が要る
+        to: 署名鍵が必要となる
+
+  - expected: 不要とな
+    pattern: /要らなくな/
+    specs:
+      - from: 規則が要らなくなる
+        to: 規則が不要となる
+
+  - expected: 不要
+    pattern: /要らない/
+    specs:
+      - from: 正規化は要らない
+        to: 正規化は不要
+
+  - expected: 必要とな$1
+    pattern: /必要にな([りるっ])/
+    specs:
+      - from: 署名鍵が必要になる
+        to: 署名鍵が必要となる
+      - from: 再認証が必要になり、手間が増える
+        to: 再認証が必要となり、手間が増える
+      - from: 変更が必要になった
+        to: 変更が必要となった
+
+  - expected: 採用しな
+    pattern: /採らな/
+    specs:
+      - from: 選択肢 A を採らない
+        to: 選択肢 A を採用しない
+      - from: 選択肢 A を採用しない
+        to: 選択肢 A を採用しない
+
+  - expected: 採用せず
+    pattern: /採らず/
+    specs:
+      - from: JWS を採らず
+        to: JWS を採用せず
+
+  - expected: 採用す
+    pattern: /採(?=る)/
+    specs:
+      - from: 選択肢 B を採る
+        to: 選択肢 B を採用する
+      - from: どれを採るか
+        to: どれを採用するか
+      - from: 選択肢 B を採択する
+        to: 選択肢 B を採択する
+
+  - expected: 採用し
+    pattern: /採っ(?=[たて])/
+    specs:
+      - from: 構成を採った
+        to: 構成を採用した
+      - from: どの防御策を採っても
+        to: どの防御策を採用しても
+
+  - expected: 採用し
+    pattern: /採り/
+    specs:
+      - from: 複数発行を採り、強度を決めた
+        to: 複数発行を採用し、強度を決めた
+
+  - expected: 採用できな
+    pattern: /採れな/
+    specs:
+      - from: 矛盾するため採れない
+        to: 矛盾するため採用できない
+
+  - expected: 採用すれ
+    pattern: /採れ(?=ば)/
+    specs:
+      - from: Achievement を採れば
+        to: Achievement を採用すれば
+
+  - expected: 発行基準
+    pattern: 発行条件
+    specs:
+      - from: thresholds で表せない発行条件
+        to: thresholds で表せない発行基準
+
+  - expected: 達すべき水準
+    patterns:
+      - 最低水準
+      - 水準の下限
+    specs:
+      - from: 最低水準で表せない
+        to: 達すべき水準で表せない
+
+  - expected: 評価者
+    patterns:
+      - 発行者
+      - 判定者
+    specs:
+      - from: 発行者が到達 VC を発行する
+        to: 評価者が到達 VC を発行する
+      - from: 判定者ごとに結論が変わる
+        to: 評価者ごとに結論が変わる
+
+  - expected: 提示した者
+    pattern: 提示者
+    specs:
+      - from: 提示者が正当な保持者か
+        to: 提示した者が正当な保持者か
+
+  - expected: リダイレクトに従
+    pattern: /リダイレクト[をは]辿/
+    specs:
+      - from: リダイレクトを辿る
+        to: リダイレクトに従る
+
+  - expected: できて、
+    pattern: /でき、/
+    specs:
+      - from: 鍵を配信でき、照合を通せる
+        to: 鍵を配信できて、照合を通せる
+
+  - expected: 成果物
+    pattern: 産物
+    specs:
+      - from: ビルド産物を持つ理由がない
+        to: ビルド成果物を持つ理由がない
+
+  - expected: 例
+    pattern:
+      - /examples(?!/) ?/
+      - サンプル
+    specs:
+      - from: examples を検証し
+        to: 例を検証し
+      - from: 仕様のサンプルは
+        to: 仕様の例は
+
+  - expected: 呼び出し
+    pattern: 配線
+    specs:
+      - from: この配線を確かめる
+        to: この呼び出しを確かめる
+
+  - expected: 呼び出す側
+    pattern: 上位
+    specs:
+      - from: 上位のテスト
+        to: 呼び出す側のテスト
+
+  - expected: インターフェイス
+    pattern: 下位
+    specs:
+      - from: 下位の扱い
+        to: インターフェイスの扱い
