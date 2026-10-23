@@ -1,0 +1,7 @@
+{
+  "id": "https://lab.example.shake.kaiden.works/endorsements",
+  "type": "EndorsementList",
+  "schemaUri": "https://shake.kaiden.works/schemas/endorsement-list/1.0.0",
+  "schemaUri#integrity": "sha256-M8b1LJOlYSr0ec/X1xZyTA/R9zj66HGjS48JRngsjX8=",
+  "endorsements": []
+}

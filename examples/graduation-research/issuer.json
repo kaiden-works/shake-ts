@@ -1,0 +1,9 @@
+{
+  "id": "https://lab.example.shake.kaiden.works/issuer/1.0.0",
+  "type": "Issuer",
+  "schemaUri": "https://shake.kaiden.works/schemas/issuer/1.0.0",
+  "schemaUri#integrity": "sha256-bTa2KswHnElxuhpDMqs5zs932z80U19VW6ASGzWCJoQ=",
+  "name": "例題大学 情報工学科 第 3 研究室",
+  "url": "https://lab.example.shake.kaiden.works",
+  "endorsements": "https://lab.example.shake.kaiden.works/endorsements"
+}

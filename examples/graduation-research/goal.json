@@ -1,0 +1,23 @@
+{
+  "id": "https://lab.example.shake.kaiden.works/courses/graduation-research/1.0.0",
+  "type": "Goal",
+  "schemaUri": "https://shake.kaiden.works/schemas/goal/1.0.0",
+  "schemaUri#integrity": "sha256-3gx5lUCllB2uDLPWChKd0w0a4xG4vwUwU7mBIfDmiGM=",
+  "name": "卒業研究",
+  "description": "指導教員のもとで研究テーマを設定し、卒業論文にまとめるまでの過程",
+  "issuer": {
+    "id": "https://lab.example.shake.kaiden.works/issuer/1.0.0",
+    "integrity": "sha256-a4YQlSdl9abAqi7syt5WzuCa3LVUq1GzaE8oaM+uHR4="
+  },
+  "rubric": {
+    "id": "https://lab.example.shake.kaiden.works/rubrics/graduation-research/1.0.0",
+    "integrity": "sha256-1lDoVTtMuhmXgwP+BrEUc76pqSas9oNKBZIRxKlAWtA="
+  },
+  "thresholds": [
+    {
+      "criterion": "https://lab.example.shake.kaiden.works/rubrics/graduation-research/1.0.0#supervisor-approval",
+      "minLevel": "https://lab.example.shake.kaiden.works/rubrics/graduation-research/1.0.0#approved"
+    }
+  ],
+  "thresholdNote": "卒業論文の提出と最終発表を終えていること"
+}

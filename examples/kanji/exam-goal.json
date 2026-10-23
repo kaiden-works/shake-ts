@@ -1,0 +1,26 @@
+{
+  "id": "https://school.example.shake.kaiden.works/exams/kanji-kentei-8/1.0.0",
+  "type": "Goal",
+  "schemaUri": "https://shake.kaiden.works/schemas/goal/1.0.0",
+  "schemaUri#integrity": "sha256-3gx5lUCllB2uDLPWChKd0w0a4xG4vwUwU7mBIfDmiGM=",
+  "name": "漢字検定 8 級 相当試験",
+  "description": "小学 3 年生の配当漢字 200 字の読み書きを問う筆記試験",
+  "issuer": {
+    "id": "https://school.example.shake.kaiden.works/issuer/1.0.0",
+    "integrity": "sha256-Lg0IzfK89jaKxipYBCh140CMFanD+vJwhz+VIm4SHk0="
+  },
+  "rubric": {
+    "id": "https://school.example.shake.kaiden.works/rubrics/kanji-3rd/1.0.0",
+    "integrity": "sha256-VS9+r0NJOozBjIUgIWpLcjTKpLtMs/oXU7sDB16tQaU="
+  },
+  "thresholds": [
+    {
+      "criterion": "https://school.example.shake.kaiden.works/rubrics/kanji-3rd/1.0.0#reading",
+      "minLevel": "https://school.example.shake.kaiden.works/rubrics/kanji-3rd/1.0.0#reading-80"
+    },
+    {
+      "criterion": "https://school.example.shake.kaiden.works/rubrics/kanji-3rd/1.0.0#writing",
+      "minLevel": "https://school.example.shake.kaiden.works/rubrics/kanji-3rd/1.0.0#writing-100"
+    }
+  ]
+}

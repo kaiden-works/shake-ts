@@ -1,0 +1,13 @@
+{
+  "issuer": "https://school.example.shake.kaiden.works/issuer/1.0.0",
+  "jwks": {
+    "keys": [
+      {
+        "kid": "key-2026-q3",
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "xVfQ7sK2mLpR9bT4nZcE8yHjW1uD6aG3oQiN5vXtBkY"
+      }
+    ]
+  }
+}
