@@ -1,0 +1,52 @@
+{
+  "id": "https://school.example.shake.kaiden.works/rubrics/kanji-3rd/1.0.0",
+  "type": "Rubric",
+  "schemaUri": "https://shake.kaiden.works/schemas/rubric/1.0.0",
+  "schemaUri#integrity": "sha256-puvsXEGgBBwNI8ds0ZCoaVTY+qkQcCd8Y3rST6euBt0=",
+  "name": "3 年生の漢字 評価尺度",
+  "description": "小学 3 年生の配当漢字 200 字についての読みと書きの到達水準",
+  "issuer": {
+    "id": "https://school.example.shake.kaiden.works/issuer/1.0.0",
+    "integrity": "sha256-Lg0IzfK89jaKxipYBCh140CMFanD+vJwhz+VIm4SHk0="
+  },
+  "criteria": [
+    {
+      "id": "https://school.example.shake.kaiden.works/rubrics/kanji-3rd/1.0.0#reading",
+      "name": "読み",
+      "description": "確認問題の読み取り設問の正答率で測る",
+      "levels": [
+        {
+          "id": "https://school.example.shake.kaiden.works/rubrics/kanji-3rd/1.0.0#reading-60",
+          "name": "6 割"
+        },
+        {
+          "id": "https://school.example.shake.kaiden.works/rubrics/kanji-3rd/1.0.0#reading-80",
+          "name": "8 割"
+        },
+        {
+          "id": "https://school.example.shake.kaiden.works/rubrics/kanji-3rd/1.0.0#reading-100",
+          "name": "10 割"
+        }
+      ]
+    },
+    {
+      "id": "https://school.example.shake.kaiden.works/rubrics/kanji-3rd/1.0.0#writing",
+      "name": "書き",
+      "description": "確認問題の書き取り設問の正答率で測る",
+      "levels": [
+        {
+          "id": "https://school.example.shake.kaiden.works/rubrics/kanji-3rd/1.0.0#writing-60",
+          "name": "6 割"
+        },
+        {
+          "id": "https://school.example.shake.kaiden.works/rubrics/kanji-3rd/1.0.0#writing-80",
+          "name": "8 割"
+        },
+        {
+          "id": "https://school.example.shake.kaiden.works/rubrics/kanji-3rd/1.0.0#writing-100",
+          "name": "10 割"
+        }
+      ]
+    }
+  ]
+}

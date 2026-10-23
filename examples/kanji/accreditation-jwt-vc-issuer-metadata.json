@@ -1,0 +1,13 @@
+{
+  "issuer": "https://kanji-kyokai.example.shake.kaiden.works/issuer/1.0.0",
+  "jwks": {
+    "keys": [
+      {
+        "kid": "key-2026-q2",
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "9pLcR4mXvA2tKdQ8ZjF6yE1wNhU3sB7oG5aTiVnQxMo"
+      }
+    ]
+  }
+}

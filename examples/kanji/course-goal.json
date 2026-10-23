@@ -1,0 +1,27 @@
+{
+  "id": "https://school.example.shake.kaiden.works/courses/kanji-3rd/2.0.0",
+  "type": "Goal",
+  "schemaUri": "https://shake.kaiden.works/schemas/goal/1.0.0",
+  "schemaUri#integrity": "sha256-3gx5lUCllB2uDLPWChKd0w0a4xG4vwUwU7mBIfDmiGM=",
+  "name": "3 年生の漢字",
+  "description": "小学 3 年生で学習する漢字 200 字の読み書き。単元ごとの練習を通して到達を判定する",
+  "issuer": {
+    "id": "https://school.example.shake.kaiden.works/issuer/1.0.0",
+    "integrity": "sha256-Lg0IzfK89jaKxipYBCh140CMFanD+vJwhz+VIm4SHk0="
+  },
+  "rubric": {
+    "id": "https://school.example.shake.kaiden.works/rubrics/kanji-3rd/1.0.0",
+    "integrity": "sha256-VS9+r0NJOozBjIUgIWpLcjTKpLtMs/oXU7sDB16tQaU="
+  },
+  "thresholds": [
+    {
+      "criterion": "https://school.example.shake.kaiden.works/rubrics/kanji-3rd/1.0.0#reading",
+      "minLevel": "https://school.example.shake.kaiden.works/rubrics/kanji-3rd/1.0.0#reading-80"
+    },
+    {
+      "criterion": "https://school.example.shake.kaiden.works/rubrics/kanji-3rd/1.0.0#writing",
+      "minLevel": "https://school.example.shake.kaiden.works/rubrics/kanji-3rd/1.0.0#writing-80"
+    }
+  ],
+  "thresholdNote": "全 20 単元の練習を完了していること"
+}

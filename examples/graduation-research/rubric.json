@@ -1,0 +1,29 @@
+{
+  "id": "https://lab.example.shake.kaiden.works/rubrics/graduation-research/1.0.0",
+  "type": "Rubric",
+  "schemaUri": "https://shake.kaiden.works/schemas/rubric/1.0.0",
+  "schemaUri#integrity": "sha256-puvsXEGgBBwNI8ds0ZCoaVTY+qkQcCd8Y3rST6euBt0=",
+  "name": "卒業研究の評価尺度",
+  "description": "卒業研究の遂行についての指導教員による認定",
+  "issuer": {
+    "id": "https://lab.example.shake.kaiden.works/issuer/1.0.0",
+    "integrity": "sha256-a4YQlSdl9abAqi7syt5WzuCa3LVUq1GzaE8oaM+uHR4="
+  },
+  "criteria": [
+    {
+      "id": "https://lab.example.shake.kaiden.works/rubrics/graduation-research/1.0.0#supervisor-approval",
+      "name": "指導教員の認定",
+      "description": "判定は指導教員の裁量による",
+      "levels": [
+        {
+          "id": "https://lab.example.shake.kaiden.works/rubrics/graduation-research/1.0.0#not-approved",
+          "name": "未認定"
+        },
+        {
+          "id": "https://lab.example.shake.kaiden.works/rubrics/graduation-research/1.0.0#approved",
+          "name": "認定"
+        }
+      ]
+    }
+  ]
+}

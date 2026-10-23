@@ -1,0 +1,9 @@
+{
+  "id": "https://school.example.shake.kaiden.works/issuer/1.0.0",
+  "type": "Issuer",
+  "schemaUri": "https://shake.kaiden.works/schemas/issuer/1.0.0",
+  "schemaUri#integrity": "sha256-bTa2KswHnElxuhpDMqs5zs932z80U19VW6ASGzWCJoQ=",
+  "name": "例題学園",
+  "url": "https://school.example.shake.kaiden.works",
+  "endorsements": "https://school.example.shake.kaiden.works/endorsements"
+}
