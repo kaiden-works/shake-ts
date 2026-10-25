@@ -1,5 +1,5 @@
 {
-  "id": "https://lab.example.shake.kaiden.works/courses/graduation-research/1.0.0",
+  "id": "https://lab.example.shake.kaiden.works/goals/graduation-research/1.0.0",
   "type": "Goal",
   "schemaUri": "https://shake.kaiden.works/schemas/goal/1.0.0",
   "schemaUri#integrity": "sha256-3gx5lUCllB2uDLPWChKd0w0a4xG4vwUwU7mBIfDmiGM=",
