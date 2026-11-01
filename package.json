@@ -4,6 +4,9 @@
   "description": "kaiden shake 到達クレデンシャル仕様の参照実装",
   "private": true,
   "type": "module",
+  "imports": {
+    "#*": "./src/*"
+  },
   "scripts": {
     "format": "oxfmt 'src/**/*.ts'",
     "format:check": "oxfmt --check 'src/**/*.ts'",

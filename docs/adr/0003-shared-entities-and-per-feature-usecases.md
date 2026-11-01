@@ -1,4 +1,4 @@
-# 0003: entity を共通にし、usecase と adapter を feature ごとに置く
+# 0003: Entities を共通にし、Use Cases と Interface Adapters を feature ごとに置く
 
 ## ステータス
 
@@ -6,7 +6,7 @@
 
 ## 背景
 
-[clean architecture のレイヤーで組む](./0002-clean-architecture-layers.md)と決めた。ディレクトリーをレイヤーで切るか、feature で切るかを決める必要がある。
+[Clean Architecture を採用する](./0002-clean-architecture-layers.md)と決めた。ディレクトリーをレイヤーで切るか、feature で切るかを決める必要がある。
 
 feature は verify、precheck、issue、present の 4 つで、[PRD のスコープ](../PRD.md#スコープ)に対応する。4 つは仕様の用語表 1 つで定まる同じモデルを扱い、違いは検証者、評価者、保証者、保持者という役割だけである。bounded context は 1 つである。
 
@@ -22,13 +22,13 @@ feature は verify、precheck、issue、present の 4 つで、[PRD のスコー
 
 ### 選択肢 B: feature だけで切る
 
-`verify`、`precheck`、`issue`、`present` のディレクトリーに、entity を含む全層を置く。
+`verify`、`precheck`、`issue`、`present` のディレクトリーに、Entities を含む全レイヤーを置く。
 
 利点は、ディレクトリー名で目的が読めることである。
 
 欠点は、bounded context が 1 つで entity を 4 つの feature が共有するため、entity の置き場が決まらず、重複か feature 間の import が生じることである。
 
-### 選択肢 C: entity を共通にし、usecase と adapter を feature ごとに置く
+### 選択肢 C: Entities を共通にし、Use Cases と Interface Adapters を feature ごとに置く
 
 `entities` を共通に置き、`verify`、`precheck`、`issue`、`present` の下に `usecases` と `adapters` を置く。precheck は verify の usecase を使い、逆方向の依存は作らない。
 
