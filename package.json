@@ -11,6 +11,7 @@
     "format": "oxfmt 'src/**/*.ts'",
     "format:check": "oxfmt --check 'src/**/*.ts'",
     "lint": "oxlint src",
+    "lint:actions": "jactionlint",
     "lint:docs": "textlint 'docs/**/*.md' 'examples/**/*.md' README.md",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"

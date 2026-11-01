@@ -1,0 +1,60 @@
+name: quality gate
+
+# 必須チェックのため、ワークフローはパスで絞らず常に動かす
+# 検査の対象のパスが変わっていなければ検査ステップを省き、ジョブは成功で終わる
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality-gate:
+    name: quality gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - id: filter
+        uses: ./.github/actions/changed-paths
+        with:
+          paths: |
+            src/**
+            docs/**
+            examples/**
+            .github/**
+            README.md
+            package.json
+            pnpm-lock.yaml
+            pnpm-workspace.yaml
+            tsconfig.json
+            vitest.config.ts
+            .oxfmtrc.json
+            .textlintrc.json
+            prh.yml
+            mise.toml
+            mise.lock
+      - if: steps.filter.outputs.relevant == 'true'
+        uses: jdx/mise-action@9b200bcecbfd6303e69a4a261b2e09e3757440a7 # v5.2.0
+      - if: steps.filter.outputs.relevant == 'true'
+        run: pnpm install --frozen-lockfile
+      - if: steps.filter.outputs.relevant == 'true'
+        run: pnpm typecheck
+      - if: steps.filter.outputs.relevant == 'true'
+        run: pnpm lint
+      - if: steps.filter.outputs.relevant == 'true'
+        run: pnpm format:check
+      - if: steps.filter.outputs.relevant == 'true'
+        run: pnpm test
+      - if: steps.filter.outputs.relevant == 'true'
+        run: pnpm lint:docs
+      - if: steps.filter.outputs.relevant == 'true'
+        run: pnpm lint:actions

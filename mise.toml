@@ -1,3 +1,7 @@
 [tools]
-node = "24"
+node = "26"
 pnpm = "latest"
+jactionlint = "latest"
+
+[settings]
+minimum_release_age = "3d"
