@@ -1,0 +1,22 @@
+name: changed paths
+description: 比較元のコミットから指定のパスが変わったかを判定する
+
+inputs:
+  paths:
+    description: 改行区切りのパスのパターン。sh の case のパターンとして一致させる
+    required: true
+
+outputs:
+  relevant:
+    description: 指定のパスが 1 つでも変わっていれば true。判定できないときも true
+    value: ${{ steps.diff.outputs.relevant }}
+
+runs:
+  using: composite
+  steps:
+    - id: diff
+      shell: sh
+      run: sh "$GITHUB_ACTION_PATH/changed-paths.sh"
+      env:
+        PATHS: ${{ inputs.paths }}
+        BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
