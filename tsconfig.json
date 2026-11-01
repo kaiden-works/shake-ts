@@ -4,7 +4,9 @@
     "types": ["node", "vitest/importMeta"],
     "resolveJsonModule": true,
     "noUncheckedIndexedAccess": true,
-    "noEmit": true
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": false
   },
   "include": ["src/**/*.ts", "vitest.config.ts"]
 }

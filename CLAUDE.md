@@ -22,3 +22,7 @@
 - 「保証」は endorsement の意味だけに使う
     - 評価者が到達の事実を検証者に伝えることは「示す」と書く
     - 保証 VC と混同させないため
+- Clean Architecture のレイヤーは Entities、Use Cases、Interface Adapters と書く
+    - レイヤー内の個々のモジュールは entity、usecase、controller、port と小文字で書く
+    - ディレクトリーは `entities`、`usecases`、`adapters`、`gateways`、`controllers`、`presenters` とコードの表記で書く
+    - prh.yml は大文字小文字の使いわけを表せないため、ここに書く

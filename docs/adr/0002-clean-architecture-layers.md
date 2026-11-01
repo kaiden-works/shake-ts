@@ -1,4 +1,4 @@
-# 0002: clean architecture のレイヤーで組む
+# 0002: Clean Architecture を採用する
 
 ## ステータス
 
@@ -23,13 +23,13 @@
 - 仕様の規則が実装の詳細を直接 import するため、両者が同じモジュールに混ざる
 - 呼び出す側のテストで実装の詳細を差し替えるには import 単位のモックが必要となる
 
-### 選択肢 B: clean architecture のレイヤーで組む
+### 選択肢 B: Clean Architecture を採用する
 
-entity、usecase、adapter の 3 つのレイヤーに分け、adapter は usecase に、usecase は entity に依存する。逆の依存は作らない。usecase は外部とのインターフェイスを port として定義し、adapter が実装する。usecase は port を引数で受け取る。他の usecase を呼ぶときは、その usecase も引数で受け取る。CLI の入口は `bin/` に置き、adapter の controller を呼ぶだけにする。
+Entities、Use Cases、Interface Adapters の 3 つのレイヤーに分け、Interface Adapters は Use Cases に、Use Cases は Entities に依存する。逆の依存は作らない。usecase は外部とのインターフェイスを port として定義し、Interface Adapters の port 実装が実装する。usecase は port を引数で受け取る。他の usecase を呼ぶときは、その usecase も引数で受け取る。CLI の入口は `bin/` に置き、Interface Adapters の controller を呼ぶだけにする。
 
 利点は次のとおり。
 
-- 仕様の規則が entity と usecase に集まり、実装の詳細は adapter だけが持つ
+- 仕様の規則が Entities と Use Cases に集まり、実装の詳細は Interface Adapters だけが持つ
 - usecase のテストで、引数で受け取る port と usecase を関数に差し替えて、呼び出しの引数と順序、結果の扱いを確かめられる
 
 欠点は、レイヤーごとにファイルと型が増えることである。
